@@ -1,0 +1,25 @@
+{
+  "name": "exerhospitaltype",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "live-server": "^1.2.1",
+    "tsc": "^1.20150623.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start":"live-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jvitorn/ExerHospitalType.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jvitorn/ExerHospitalType/issues"
+  },
+  "homepage": "https://github.com/jvitorn/ExerHospitalType#readme"
+}
