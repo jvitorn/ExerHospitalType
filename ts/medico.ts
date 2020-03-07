@@ -4,10 +4,10 @@ namespace hospital{
         private crm:number|undefined;
         private especialidade:string|undefined;
         //getters e setters
-        getCrm(crm:number){
+        getCrm():number|undefined{
             return this.crm;
         }
-        getEspecialidade(especialidade:string){
+        getEspecialidade():string|undefined{
             return this.especialidade;
         }
         setCrm(crm:number):void{

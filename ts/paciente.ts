@@ -3,8 +3,9 @@ namespace hospital{
         //caracteristicas da classe
         private codPaciente:number|undefined;
         //reescrever construtor de pessoa
-        constructor(nome:string,cpf:string){
+        constructor(nome:string,cpf:string,cod:number){
             super(nome,cpf);
+            this.codPaciente = cod;
         }
         //getters e setters
         getCodPaciente(){
