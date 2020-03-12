@@ -21,13 +21,13 @@ namespace hospital {
     mostrarfuncionariocpf.textContent = f.getCpf();  
     mostrarfuncionariocodigo.textContent = f.getCodFuncionario().toString();  
     }
-    export function paciente(codigo:number,nome:string,cpf:string){
+    export function paciente(codigo:number,nome:string,cpf:string,nomepaciente:string,cpfpaciente:string,codigopaciente:string){
       //definindo uma nova pessoa
     const pa = new Paciente(nome,cpf,codigo);
     //capturando id
-    let mostrarpaciente = document.getElementById('nomepaciente');
-    let mostrarpacientecpf = document.getElementById('cpfpaciente');
-    let mostrarpacientecodigo = document.getElementById('codigopaciente');
+    let mostrarpaciente = document.getElementById(nomepaciente);
+    let mostrarpacientecpf = document.getElementById(cpfpaciente);
+    let mostrarpacientecodigo = document.getElementById(codigopaciente);
     //puxando informaçoes da classe e inserindo no id
     mostrarpaciente.textContent = pa.getNome();
     mostrarpacientecpf.textContent = pa.getCpf();  
@@ -49,4 +49,18 @@ namespace hospital {
     mostrarcodM.textContent = m.getCodFuncionario().toString();
     mostrarEspecialidade.textContent = m.getEspecialidade();  
     }
+    export function enfermeiro(codigo:number,nome:string,cpf:string,coren:number,idnomeE:string,idcodE:string,idcoremE:string){
+    //definindo uma nova pessoa
+    const e = new Enfermeiro(nome,cpf,codigo);
+    e.setCoren(coren);
+    //capturando id
+    let mostrarnomeE = document.getElementById(idnomeE);
+    let mostrarcodE = document.getElementById(idcodE);
+    let mostrarCorem = document.getElementById(idcoremE);
+    //puxando informaçoes da classe e inserindo no id
+    mostrarnomeE.textContent = e.getNome();
+    mostrarcodE.textContent = e.getCodFuncionario().toString();  
+    mostrarCorem.textContent = e.getCoren().toString();      
+    }
+    export funcionario hospital()
 }

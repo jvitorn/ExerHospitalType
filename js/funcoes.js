@@ -25,13 +25,13 @@ var hospital;
         mostrarfuncionariocodigo.textContent = f.getCodFuncionario().toString();
     }
     hospital.funcionario = funcionario;
-    function paciente(codigo, nome, cpf) {
+    function paciente(codigo, nome, cpf, nomepaciente, cpfpaciente, codigopaciente) {
         //definindo uma nova pessoa
         var pa = new hospital.Paciente(nome, cpf, codigo);
         //capturando id
-        var mostrarpaciente = document.getElementById('nomepaciente');
-        var mostrarpacientecpf = document.getElementById('cpfpaciente');
-        var mostrarpacientecodigo = document.getElementById('codigopaciente');
+        var mostrarpaciente = document.getElementById(nomepaciente);
+        var mostrarpacientecpf = document.getElementById(cpfpaciente);
+        var mostrarpacientecodigo = document.getElementById(codigopaciente);
         //puxando informaçoes da classe e inserindo no id
         mostrarpaciente.textContent = pa.getNome();
         mostrarpacientecpf.textContent = pa.getCpf();
@@ -55,4 +55,20 @@ var hospital;
         mostrarEspecialidade.textContent = m.getEspecialidade();
     }
     hospital.medico = medico;
+    function enfermeiro(codigo, nome, cpf, coren, idnomeE, idcodE, idcoremE) {
+        //definindo uma nova pessoa
+        var e = new hospital.Enfermeiro(nome, cpf, codigo);
+        e.setCoren(coren);
+        //capturando id
+        var mostrarnomeE = document.getElementById(idnomeE);
+        var mostrarcodE = document.getElementById(idcodE);
+        var mostrarCorem = document.getElementById(idcoremE);
+        //puxando informaçoes da classe e inserindo no id
+        mostrarnomeE.textContent = e.getNome();
+        mostrarcodE.textContent = e.getCodFuncionario().toString();
+        mostrarCorem.textContent = e.getCoren().toString();
+    }
+    hospital.enfermeiro = enfermeiro;
+    funcionario;
+    hospital.hospital();
 })(hospital || (hospital = {}));
