@@ -1,5 +1,5 @@
 namespace hospital{
-    export class hospital {
+    export class Hospital {
         //caracteristicas da classe
         private nome:string|undefined;
         private enfermeiros:Array<Enfermeiro> = [];

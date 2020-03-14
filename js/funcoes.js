@@ -10,6 +10,7 @@ var hospital;
         //puxando informaçoes da classe e inserindo no id
         mostrarpessoa.textContent = p.getNome();
         mostrarpessoacpf.textContent = p.getCpf();
+        return p;
     }
     hospital.pessoa = pessoa;
     function funcionario(codigo, nome, cpf) {
@@ -23,6 +24,7 @@ var hospital;
         mostrarfuncionario.textContent = f.getNome();
         mostrarfuncionariocpf.textContent = f.getCpf();
         mostrarfuncionariocodigo.textContent = f.getCodFuncionario().toString();
+        return f;
     }
     hospital.funcionario = funcionario;
     function paciente(codigo, nome, cpf, nomepaciente, cpfpaciente, codigopaciente) {
@@ -36,6 +38,7 @@ var hospital;
         mostrarpaciente.textContent = pa.getNome();
         mostrarpacientecpf.textContent = pa.getCpf();
         mostrarpacientecodigo.textContent = pa.getCodPaciente().toString();
+        return pa;
     }
     hospital.paciente = paciente;
     function medico(codigo, nome, cpf, crm, especial, idnome, idcod, idcrm, idespe) {
@@ -53,6 +56,7 @@ var hospital;
         mostrarCrm.textContent = m.getCrm().toString();
         mostrarcodM.textContent = m.getCodFuncionario().toString();
         mostrarEspecialidade.textContent = m.getEspecialidade();
+        return m;
     }
     hospital.medico = medico;
     function enfermeiro(codigo, nome, cpf, coren, idnomeE, idcodE, idcoremE) {
@@ -67,8 +71,15 @@ var hospital;
         mostrarnomeE.textContent = e.getNome();
         mostrarcodE.textContent = e.getCodFuncionario().toString();
         mostrarCorem.textContent = e.getCoren().toString();
+        return e;
     }
     hospital.enfermeiro = enfermeiro;
-    funcionario;
-    hospital.hospital();
+    /*export function hospital(){
+    //definindo hospital
+    const h = new Hospital();
+    let nomeH = document.getElementById(nome);
+    let enfermeiros = document.getElementById(enfermeiro);
+    let medicos = document.getElementById(medico);
+    let pacientes = document.getElementById(paciente);
+    }*/
 })(hospital || (hospital = {}));

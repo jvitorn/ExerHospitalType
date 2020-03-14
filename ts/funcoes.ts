@@ -8,6 +8,7 @@ namespace hospital {
     //puxando informaçoes da classe e inserindo no id
     mostrarpessoa.textContent = p.getNome();
     mostrarpessoacpf.textContent = p.getCpf();
+    return p;
     }
     export function funcionario(codigo:number,nome:string,cpf:string){
       //definindo uma nova pessoa
@@ -19,7 +20,8 @@ namespace hospital {
     //puxando informaçoes da classe e inserindo no id
     mostrarfuncionario.textContent = f.getNome();
     mostrarfuncionariocpf.textContent = f.getCpf();  
-    mostrarfuncionariocodigo.textContent = f.getCodFuncionario().toString();  
+    mostrarfuncionariocodigo.textContent = f.getCodFuncionario().toString(); 
+    return f; 
     }
     export function paciente(codigo:number,nome:string,cpf:string,nomepaciente:string,cpfpaciente:string,codigopaciente:string){
       //definindo uma nova pessoa
@@ -32,6 +34,7 @@ namespace hospital {
     mostrarpaciente.textContent = pa.getNome();
     mostrarpacientecpf.textContent = pa.getCpf();  
     mostrarpacientecodigo.textContent = pa.getCodPaciente().toString();  
+    return pa;
     }
     export function medico(codigo:number,nome:string,cpf:string,crm:number,especial:string,idnome:string,idcod:string,idcrm:string,idespe:string){
       //definindo uma nova pessoa
@@ -48,6 +51,7 @@ namespace hospital {
     mostrarCrm.textContent = m.getCrm().toString();
     mostrarcodM.textContent = m.getCodFuncionario().toString();
     mostrarEspecialidade.textContent = m.getEspecialidade();  
+    return m;
     }
     export function enfermeiro(codigo:number,nome:string,cpf:string,coren:number,idnomeE:string,idcodE:string,idcoremE:string){
     //definindo uma nova pessoa
@@ -60,7 +64,15 @@ namespace hospital {
     //puxando informaçoes da classe e inserindo no id
     mostrarnomeE.textContent = e.getNome();
     mostrarcodE.textContent = e.getCodFuncionario().toString();  
-    mostrarCorem.textContent = e.getCoren().toString();      
+    mostrarCorem.textContent = e.getCoren().toString();   
+    return e;   
     }
-    export funcionario hospital()
+    /*export function hospital(){
+    //definindo hospital
+    const h = new Hospital();
+    let nomeH = document.getElementById(nome);
+    let enfermeiros = document.getElementById(enfermeiro);
+    let medicos = document.getElementById(medico);
+    let pacientes = document.getElementById(paciente);
+    }*/
 }
